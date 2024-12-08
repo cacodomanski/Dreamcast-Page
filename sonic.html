@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Sobre Dreamcast</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="principal">
+        <div id="cabecalho">
+
+        </div>
+
+        <div id="menu">
+
+            <a href="index.html">
+            <div class="item1">
+                Home
+            </div>
+            </a>
+
+            <a href="sonic.html">
+            <div class="item2">
+                Sonic
+            </div>
+            </a>
+
+            <a href="knucles.html">
+            <div class="item3">
+                Knuckles
+            </div>
+            </a>
+
+            <a href="tails.html">
+            <div class="item4">
+                Tails
+            </div>
+            </a>
+
+            <a href="https://criticalhits.com.br/games/50-melhores-jogos-dreamcast/" target="blank">
+            <div class="item5">
+                Jogos
+            </div>
+            </a>
+
+        </div>
+
+        <div id="texto1">
+
+            <p>Sonic the Hedgehog é um ouriço azul nascido em Green Hill, na South Island. Lá ele vive e tem muitos amigos. Desde pequeno sempre foi famoso por ser um pouco diferente: ser o mais veloz dos animais da floresta! O Sonic vive num mundo cheio de animais, e sustentado pelo poder de pedras especiais, as Chaos Emerald. As Chaos Emerald (ou Esmeraldas do Caos, ou simplesmente Esmeralda Caóticas) são uma poderosa e misteriosa fonte de poder.</p>
+            <p>Dr Robotnik, ou Dr Eggman, um maluco cientista, resolveu dominar o mundo do Sonic. Para tal, ele raptou todos os animais, para transformá-los em robôs, compondo um poderoso e grande exército, através do qual ele irá dominar o planeta, e para isso, as Chaos Emerald são fundamentais.</p>
+            <P>Porém, Sonic, por ser muito rápido, conseguiu se livrar. Foi assim que ele sozinho ganhou a importante missão de destruir todos os robôs de Robotnik, recuperar o seu mundo, pegar de volta as Chaos Emerald, e desta forma garantir a paz de volta!</P>
+            <p>Para Sonic poder competir com Robotnik, ele também precisaria de alguma força. Essa força está concentrada nos anéis espalhados pelo Planeta. Desta forma, o Sonic destruiu todos os principais robôs de Robotnik, recuperando a paz pela ilha.</p>
+        </div>
+
+        <div class="miniatura">
+            <img src="sonic tais knucles/sonic_1.gif">
+        </div>
+
+        <div class="miniatura">
+            <img src="sonic tais knucles/sonic_2.gif">
+        </div>
+
+        <div class="miniatura">
+            <img src="sonic tais knucles/sonic_3.gif">
+        </div>
+
+    </div>
+
+    <audio id="musicaFundo" autoplay loop>
+        <source src="musica tema/Sonic Adventure (Open Your Heart).mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="item1" src="barulho-aneis-sonic.mp3"></audio>
+    <audio id="item2" src="barulho-aneis-sonic.mp3"></audio>
+    <audio id="item3" src="barulho-aneis-sonic.mp3"></audio>
+    <audio id="item4" src="barulho-aneis-sonic.mp3"></audio>
+    <audio id="item5" src="barulho-aneis-sonic.mp3"></audio>
+
+    <script>
+        const items = [
+            { element: document.querySelector('.item1'), sound: document.getElementById('item1') },
+            { element: document.querySelector('.item2'), sound: document.getElementById('item2') },
+            { element: document.querySelector('.item3'), sound: document.getElementById('item3') },
+            { element: document.querySelector('.item4'), sound: document.getElementById('item4') },
+            { element: document.querySelector('.item5'), sound: document.getElementById('item5') }
+        ];
+
+        items.forEach(({ element, sound }) => {
+            element.addEventListener('mouseover', () => {
+                sound.currentTime = 0; 
+                sound.play();
+            });
+        });
+
+
+    </script>
+</body>

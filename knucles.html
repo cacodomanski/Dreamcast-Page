@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Sobre Dreamcast</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="principal">
+        <div id="cabecalho">
+
+        </div>
+
+        <div id="menu">
+
+            <a href="index.html">
+            <div class="item1">
+                Home
+            </div>
+            </a>
+
+            <a href="sonic.html">
+            <div class="item2">
+                Sonic
+            </div>
+            </a>
+
+            <a href="knucles.html">
+            <div class="item3">
+                Knuckles
+            </div>
+            </a>
+
+            <a href="tails.html">
+            <div class="item4">
+                Tails
+            </div>
+            </a>
+
+            <a href="https://criticalhits.com.br/games/50-melhores-jogos-dreamcast/" target="blank">
+            <div class="item5">
+                Jogos
+            </div>
+            </a>
+
+        </div>
+
+        <div id="texto2">
+
+            <p>A primeira aparição de Knuckles aconteceu no game Sonic The Hedhegod 3, lançado em 1994 para o Mega Drive. Manipulado por Eggman a pensar que Sonic tentaria roubar a Esmeralda Mestre, ele passa a agir como um antagonista, até finalmente descobrir a verdade e se unir ao ouriço azul.</p>
+            <p>Knuckles foi criado por Takashi Yuda, que nunca teve a intenção de que ele fosse nada além de um simples personagem de apoio. Mas para sua surpresa, o personagem foi mais bem aceito pelo público do que ele esperava, aparecendo em dezenas de jogos posteriores.</p>
+            <p>Como dito anteriormente, Knuckles é o último echidna, uma outrora poderosa raça de xamãs e guerreiros. Seu clã, o clã Knuckles, vivia nas montanhas místicas há 4 mil anos, protegendo a Esmeralda Mestre e as Esmeraldas do Caos, até que um grande cataclismo se abateu sobre todos.</p>
+            <p>Quando Pachacamac, o chefe de seu clã, tentou roubar as esmeraldas, se clã foi quase todo aniquilado, e os membros sobreviventes dedicaram suas vidas a protegerem esse poder para que isso não ocorresse novamente. Eventualmente, todos morreram, até restar apenas Knuckles.</p>
+
+        </div>
+
+        <div class="miniatura">
+            <img src="sonic tais knucles/knucles_2.gif">
+        </div>
+
+        <div class="miniatura">
+            <img src="sonic tais knucles/knuckles_4.gif">
+        </div>
+
+        <div class="miniatura">
+            <img src="sonic tais knucles/knuckles_3.gif">
+        </div>
+
+    </div>
+
+
+
+    <audio id="musicaFundo" autoplay loop>
+        <source src="musica tema/Sonic Adventure (Open Your Heart).mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="item1" src="barulho-aneis-sonic.mp3"></audio>
+    <audio id="item2" src="barulho-aneis-sonic.mp3"></audio>
+    <audio id="item3" src="barulho-aneis-sonic.mp3"></audio>
+    <audio id="item4" src="barulho-aneis-sonic.mp3"></audio>
+    <audio id="item5" src="barulho-aneis-sonic.mp3"></audio>
+
+    <script>
+        
+        const items = [
+            { element: document.querySelector('.item1'), sound: document.getElementById('item1') },
+            { element: document.querySelector('.item2'), sound: document.getElementById('item2') },
+            { element: document.querySelector('.item3'), sound: document.getElementById('item3') },
+            { element: document.querySelector('.item4'), sound: document.getElementById('item4') },
+            { element: document.querySelector('.item5'), sound: document.getElementById('item5') }
+        ];
+
+        
+        items.forEach(({ element, sound }) => {
+            element.addEventListener('mouseover', () => {
+                sound.currentTime = 0; 
+                sound.play(); 
+            });
+        });
+
+
+    </script>
+</body>
